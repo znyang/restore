@@ -3,12 +3,20 @@ subprojects { project ->
     version = VERSION_NAME
 
     repositories {
+        maven {
+            url = "http://maven.oschina.net/content/groups/public/"
+        }
         mavenCentral()
+        jcenter()
     }
 
     buildscript {
         repositories {
+            maven {
+                url = "http://maven.oschina.net/content/groups/public/"
+            }
             mavenCentral()
+            jcenter()
         }
         dependencies {
             classpath 'com.android.tools.build:gradle:1.5.0'
@@ -33,7 +41,7 @@ ext {
 ext.deps = [
         // Android
         android           : 'com.google.android:android:2.1.2',
-        supportv4         : 'com.android.support:support-v4:23.0.1',
+        supportv4         : 'com.android.support:support-v4:23.1.1',
         supportAnnotations: 'com.android.support:support-annotations:23.0.1',
 
         // Square
