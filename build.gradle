@@ -3,20 +3,20 @@ subprojects { project ->
     version = VERSION_NAME
 
     repositories {
+        mavenCentral()
+        jcenter()
         maven {
             url = "http://maven.oschina.net/content/groups/public/"
         }
-        mavenCentral()
-        jcenter()
     }
 
     buildscript {
         repositories {
+            mavenCentral()
+            jcenter()
             maven {
                 url = "http://maven.oschina.net/content/groups/public/"
             }
-            mavenCentral()
-            jcenter()
         }
         dependencies {
             classpath 'com.android.tools.build:gradle:1.5.0'
@@ -33,7 +33,7 @@ ext {
     minSdkVersion = 8
     targetSdkVersion = 23
     compileSdkVersion = 23
-    buildToolsVersion = '23.0.2'
+    buildToolsVersion = '22.0.1'
     sourceCompatibilityVersion = JavaVersion.VERSION_1_7
     targetCompatibilityVersion = JavaVersion.VERSION_1_7
 }
